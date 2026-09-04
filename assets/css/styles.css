@@ -571,6 +571,9 @@ p { text-wrap: pretty; }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .card__link:hover { gap: 0.75rem; }
 .card__link::after { content: "→"; transition: transform 0.15s ease; }
