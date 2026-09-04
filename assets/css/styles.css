@@ -363,7 +363,6 @@ p { text-wrap: pretty; }
   padding-block: clamp(1.75rem, 0.75rem + 4vw, 3.25rem) clamp(3rem, 1rem + 7vw, 6rem);
   background:
     radial-gradient(900px 520px at 88% -10%, rgba(255, 195, 54, 0.35), transparent 62%),
-    radial-gradient(700px 460px at 4% 105%, rgba(15, 182, 160, 0.28), transparent 60%),
     var(--cream);
 }
 .hero__grid {
@@ -815,7 +814,11 @@ p { text-wrap: pretty; }
 }
 
 /* ---------- FAQ ---------- */
-.faq { display: grid; gap: 0.9rem; }
+.faq {
+  display: grid;
+  gap: 0.9rem;
+  margin-inline: auto;
+}
 .faq details {
   border: var(--bd);
   border-radius: var(--r-md);
@@ -824,27 +827,28 @@ p { text-wrap: pretty; }
   overflow: hidden;
 }
 .faq summary {
+  position: relative;
   cursor: pointer;
   list-style: none;
-  padding: 1.1rem 1.3rem;
+  padding: 1.1rem 3.2rem;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.05rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
+  text-align: center;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
   content: "+";
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
   font-size: 1.6rem;
   line-height: 1;
-  flex: none;
+  transform: translateY(-50%);
   transition: transform 0.2s ease;
 }
 .faq details[open] summary { background: var(--sun); }
-.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
 .faq details > p, .faq details > ul { padding: 0 1.3rem 1.2rem; margin-top: 1rem; }
 
 /* ---------- Forms ---------- */
@@ -1061,7 +1065,6 @@ p { text-wrap: pretty; }
   border-top: 3px solid var(--ink);
 }
 .donate-bar .btn { flex: 1; padding: 0.75rem 1rem; box-shadow: none; }
-@media (max-width: 700px) { .donate-bar { display: flex; } body { padding-bottom: 78px; } }
 
 /* ---------- Back to top ---------- */
 .to-top {
