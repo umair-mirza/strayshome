@@ -389,10 +389,18 @@ p { text-wrap: pretty; }
       "art"
       "actions";
   }
-  .hero__actions { text-align: center; }
-  .hero__actions .btn-row { justify-content: center; }
+  .hero__actions {
+    width: min(88vw, 440px);
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero__actions .btn-row {
+    justify-content: center;
+    transform: translateX(-0.75rem);
+  }
   .hero__stats { justify-content: center; }
   .hero__stat { text-align: center; }
+  .hero__stat--desktop { display: none; }
   .hero__intro .eyebrow { display: none; }
 }
 
