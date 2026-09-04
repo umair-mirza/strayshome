@@ -1,0 +1,29 @@
+{
+  "_readme": "Drop your Instagram photos into assets/gallery/photos/ using the file names below (or edit this list). Any entry whose image is missing automatically falls back to a friendly placeholder tile, so the site never looks broken. Keep images around 1200px on the long edge and under ~300KB for fast loading.",
+  "photos": [
+    { "src": "assets/gallery/photos/01.jpg", "alt": "A rescued puppy resting after treatment at Strays Home", "caption": "Rescued, treated, safe." },
+    { "src": "assets/gallery/photos/02.jpg", "alt": "Volunteer feeding community dogs in Islamabad", "caption": "Daily feeding rounds." },
+    { "src": "assets/gallery/photos/03.jpg", "alt": "A rescued cat recovering in the shelter", "caption": "Every cat counts." },
+    { "src": "assets/gallery/photos/04.jpg", "alt": "Veterinary care being given to an injured street dog", "caption": "On-site veterinary care." },
+    { "src": "assets/gallery/photos/05.jpg", "alt": "Dogs playing in the Strays Home sanctuary yard", "caption": "Room to run." },
+    { "src": "assets/gallery/photos/06.jpg", "alt": "A newly adopted dog with its family", "caption": "Adoption day." },
+    { "src": "assets/gallery/photos/07.jpg", "alt": "Kittens being bottle fed by a volunteer", "caption": "Bottle-feeding orphans." },
+    { "src": "assets/gallery/photos/08.jpg", "alt": "A rescued donkey being cared for", "caption": "Working animals need help too." },
+    { "src": "assets/gallery/photos/09.jpg", "alt": "Before and after of a rescued dog's recovery", "caption": "Recovery in progress." },
+    { "src": "assets/gallery/photos/10.jpg", "alt": "Volunteers loading supplies for a rescue run", "caption": "Rescue run." },
+    { "src": "assets/gallery/photos/11.jpg", "alt": "Sterilisation and vaccination drive in the community", "caption": "Vaccinate. Sterilise. Return." },
+    { "src": "assets/gallery/photos/12.jpg", "alt": "A shelter dog enjoying a sunny afternoon", "caption": "Sunny afternoons." },
+    { "src": "assets/gallery/photos/13.jpg", "alt": "A cat curled up in a shelter bed", "caption": "A warm, safe bed." },
+    { "src": "assets/gallery/photos/14.jpg", "alt": "Volunteer bathing a rescued dog", "caption": "First bath, first comfort." },
+    { "src": "assets/gallery/photos/15.jpg", "alt": "Puppies rescued from a roadside", "caption": "Found by the roadside." },
+    { "src": "assets/gallery/photos/16.jpg", "alt": "A dog with a bandaged leg wagging its tail", "caption": "Healing, one day at a time." },
+    { "src": "assets/gallery/photos/17.jpg", "alt": "The Strays Home team with rescued animals", "caption": "The team behind the work." },
+    { "src": "assets/gallery/photos/18.jpg", "alt": "A rescued dog looking into the camera", "caption": "Waiting for a family." },
+    { "src": "assets/gallery/photos/19.jpg", "alt": "Cats being fed at the shelter", "caption": "Feeding time." },
+    { "src": "assets/gallery/photos/20.jpg", "alt": "A happy rescued dog in its forever home", "caption": "Home at last." },
+    { "src": "assets/gallery/photos/21.jpg", "alt": "Community awareness session about animal welfare", "caption": "Teaching kindness." },
+    { "src": "assets/gallery/photos/22.jpg", "alt": "A rescued dog resting in the shade", "caption": "Rest and recovery." },
+    { "src": "assets/gallery/photos/23.jpg", "alt": "Medical supplies used to treat rescued animals", "caption": "Where donations go." },
+    { "src": "assets/gallery/photos/24.jpg", "alt": "A pair of rescued kittens", "caption": "Two of a kind." }
+  ]
+}
