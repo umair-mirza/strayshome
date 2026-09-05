@@ -87,9 +87,9 @@ python -m http.server 8080
 - **Design system** lives in `assets/css/styles.css` (CSS custom properties at the top —
   change the palette in one place).
 - **All behaviour** is in `assets/js/main.js`: mobile nav, scroll reveals, animated counters,
-  copy-to-clipboard, donation amount picker, marquee/wall builders, lightbox and mailto forms.
-- **Forms have no backend.** They open the visitor's email client pre-filled. If you later want
-  real form submissions, swap the `data-mailto` attribute for a Formspree/Netlify Forms endpoint.
+  copy-to-clipboard, donation amount picker, marquee/wall builders, lightbox and the adoption form.
+- **The adoption form uses Formspree.** It posts to the configured Formspree endpoint and shows an
+  inline success or fallback message without opening the visitor's email app.
 - **Accessibility:** skip link, keyboard-operable nav and lightbox, visible focus rings,
   semantic landmarks, and full `prefers-reduced-motion` support (all auto-scrolling stops).
 - **SEO:** keyword-targeted titles, meta descriptions and H1s (“animal shelter in Pakistan”,

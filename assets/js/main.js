@@ -342,24 +342,32 @@
     });
   }
 
-  /* ---------------- Forms (no backend on GitHub Pages) ---------------- */
+  /* ---------------- Forms ---------------- */
   function initForms() {
-    document.querySelectorAll("form[data-mailto]").forEach(function (form) {
+    document.querySelectorAll("form[data-formspree]").forEach(function (form) {
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var data = new FormData(form);
-        var lines = [];
-        data.forEach(function (value, key) {
-          if (String(value).trim()) lines.push(key + ": " + value);
-        });
-        var subject = form.dataset.subject || "Website enquiry";
-        var href =
-          "mailto:" + form.dataset.mailto +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(lines.join("\n\n"));
-        window.location.href = href;
         var note = form.querySelector("[data-form-status]");
-        if (note) note.textContent = "Opening your email app… If nothing happens, email us directly at " + form.dataset.mailto + ".";
+        var submit = form.querySelector("button[type='submit']");
+        if (note) note.textContent = "Sending your enquiry...";
+        if (submit) submit.disabled = true;
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        })
+          .then(function (response) {
+            if (!response.ok) throw new Error("formspree");
+            form.reset();
+            if (note) note.textContent = "Thank you. Your adoption enquiry has been sent.";
+          })
+          .catch(function () {
+            if (note) note.textContent = "Something went wrong. Please email strayshomeanimalrescue@gmail.com or message us on Instagram.";
+          })
+          .finally(function () {
+            if (submit) submit.disabled = false;
+          });
       });
     });
   }

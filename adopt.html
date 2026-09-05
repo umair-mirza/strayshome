@@ -227,21 +227,23 @@
         <p class="lede mx-auto center">Fill this in and we'll get back to you, usually within a few days.</p>
       </div>
 
-      <form class="form card" data-mailto="strayshomeanimalrescue@gmail.com" data-subject="Adoption enquiry from the website" data-reveal>
+      <form class="form card" action="https://formspree.io/f/xwlkqjee" method="POST" data-formspree data-reveal>
+        <input type="hidden" name="_subject" value="Adoption enquiry from the Strays Home website">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" hidden>
         <div class="field--row">
           <div class="field">
             <label for="ad-name">Your full name</label>
             <input id="ad-name" name="Name" type="text" autocomplete="name" required>
           </div>
           <div class="field">
-            <label for="ad-phone">Phone / WhatsApp</label>
-            <input id="ad-phone" name="Phone" type="tel" autocomplete="tel" required>
+            <label for="ad-phone">Phone number / WhatsApp</label>
+            <input id="ad-phone" name="Phone" type="tel" autocomplete="tel" placeholder="+92 3XX XXXXXXX" required>
           </div>
         </div>
         <div class="field--row">
           <div class="field">
             <label for="ad-email">Email</label>
-            <input id="ad-email" name="Email" type="email" autocomplete="email" required>
+            <input id="ad-email" name="email" type="email" autocomplete="email" required>
           </div>
           <div class="field">
             <label for="ad-city">City &amp; area</label>
@@ -274,7 +276,7 @@
         </div>
         <button class="btn btn--lg" type="submit">Send my enquiry</button>
         <p class="form__note" data-form-status>
-          This form opens your email app with the details filled in — nothing is stored on this
+          This form sends your enquiry to Strays Home through Formspree — nothing is stored on this
           website. You can also just email <a href="mailto:strayshomeanimalrescue@gmail.com">strayshomeanimalrescue@gmail.com</a>
           or WhatsApp <a href="https://wa.me/923115395616" target="_blank" rel="noopener">+92 311 5395616</a>.
         </p>
