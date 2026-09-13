@@ -305,7 +305,6 @@
     var box = document.querySelector(".lightbox");
     if (!box) return;
     var imgWrap = box.querySelector(".lightbox__inner");
-    var cap = box.querySelector(".lightbox__cap");
     var lastFocus = null;
 
     function open(item) {
@@ -315,7 +314,6 @@
       img.src = item.src;
       img.alt = item.alt || "";
       imgWrap.prepend(img);
-      cap.textContent = item.caption || item.alt || "";
       lastFocus = document.activeElement;
       box.hidden = false;
       document.body.style.overflow = "hidden";

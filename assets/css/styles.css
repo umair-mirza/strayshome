@@ -1011,7 +1011,7 @@ p { text-wrap: pretty; }
   box-shadow: var(--shadow-lg);
 }
 .lightbox__inner img { max-height: 74vh; width: auto; margin-inline: auto; }
-.lightbox__cap { padding: 0.9rem 1.2rem; font-weight: 600; font-size: 0.95rem; }
+.lightbox__cap { display: none; }
 .lightbox__close {
   position: absolute;
   top: clamp(0.75rem, 3vw, 1.5rem);
