@@ -101,7 +101,10 @@ p { text-wrap: pretty; }
   margin-inline: auto;
 }
 .wrap--wide { width: min(100% - (var(--pad) * 2), 1420px); }
-.wrap--narrow { width: min(100% - (var(--pad) * 2), 760px); }
+.wrap--narrow {
+  width: min(100% - (var(--pad) * 2), 760px);
+  margin-inline: auto;
+}
 
 .section { padding-block: clamp(3.5rem, 2rem + 6vw, 7rem); position: relative; }
 .section--tight { padding-block: clamp(2.5rem, 1.5rem + 4vw, 4.5rem); }
@@ -643,7 +646,6 @@ p { text-wrap: pretty; }
   animation: slide-x var(--speed, 60s) linear infinite;
 }
 .marquee--reverse { animation-direction: reverse; }
-.marquee-block:hover .marquee { animation-play-state: paused; }
 
 .marquee__item {
   width: clamp(190px, 24vw, 300px);

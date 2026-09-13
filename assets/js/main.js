@@ -68,7 +68,7 @@
 
   /* ---------------- Animated counters ---------------- */
   function initCounters() {
-    var nodes = document.querySelectorAll("[data-count]");
+    var nodes = document.querySelectorAll(".stat__num [data-count]");
     if (!nodes.length) return;
 
     function run(el) {
@@ -169,7 +169,7 @@
     return el;
   }
 
-  function makeTile(item, index, tag) {
+  function makeTile(item, index, tag, loading) {
     var el = document.createElement(tag);
     if (tag === "button") { el.type = "button"; }
     el.dataset.index = String(index);
@@ -177,7 +177,7 @@
       var img = document.createElement("img");
       img.src = item.src;
       img.alt = item.alt || "Rescued animal cared for by Strays Home";
-      img.loading = "lazy";
+      img.loading = loading || "lazy";
       img.decoding = "async";
       img.addEventListener("error", function () {
         img.replaceWith(placeholder(index, item.alt));
@@ -238,7 +238,7 @@
       // Rendered twice for a seamless -50% loop.
       for (var pass = 0; pass < 2; pass++) {
         items.forEach(function (item, i) {
-          var tile = makeTile(item, offset + i, "button");
+          var tile = makeTile(item, offset + i, "button", "eager");
           tile.className = "marquee__item";
           if (pass === 1) tile.setAttribute("aria-hidden", "true");
           frag.appendChild(tile);
@@ -253,7 +253,8 @@
     var wall = document.querySelector("[data-wall]");
     if (!wall) return;
     var cols = parseInt(wall.dataset.cols || "4", 10);
-    var perCol = parseInt(wall.dataset.perCol || "6", 10);
+    var requestedPerCol = parseInt(wall.dataset.perCol || "6", 10);
+    var perCol = photos.length ? Math.max(requestedPerCol, Math.ceil(photos.length / cols)) : requestedPerCol;
     var speeds = [46, 58, 52, 64];
     var idx = 0;
     var frag = document.createDocumentFragment();
