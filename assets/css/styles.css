@@ -967,7 +967,6 @@ p { text-wrap: pretty; }
 }
 .wall__col { display: grid; gap: 1rem; align-content: start; animation: slide-y var(--speed, 48s) linear infinite; }
 .wall__col--down { animation-direction: reverse; }
-.wall:hover .wall__col { animation-play-state: paused; }
 .wall__item {
   border: var(--bd);
   border-radius: var(--r-md);
