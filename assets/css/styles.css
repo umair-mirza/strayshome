@@ -404,6 +404,7 @@ p { text-wrap: pretty; }
     "actions art";
   gap: clamp(2rem, 4vw, 4rem);
   align-items: start;
+  margin-top: 20px;
 }
 .hero__intro { grid-area: intro; }
 .hero__lede { grid-area: lede; }
