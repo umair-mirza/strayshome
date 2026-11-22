@@ -215,26 +215,6 @@ p { text-wrap: pretty; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 0.9rem; }
 
 /* ---------- Header ---------- */
-.topbar {
-  background: var(--ink);
-  color: var(--cream);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.topbar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  padding: 0.5rem 0;
-  text-align: center;
-}
-.topbar a { color: var(--sun); font-weight: 800; }
-@media (max-width: 780px) {
-  .topbar { display: none; }
-}
-
 .rescue-appeal {
   background: var(--ink);
   color: var(--cream);
