@@ -38,11 +38,13 @@
 
   /* ---------------- Mark the active nav link ---------------- */
   function initActiveLink() {
-    var here = location.pathname.replace(/\/index\.html$/, "/").replace(/\/$/, "/index.html");
-    var file = here.split("/").pop() || "index.html";
+    function pagePath(path) { return path.replace(/\/(?:index\.html)?$/, "/"); }
+
+    var here = pagePath(location.pathname);
     document.querySelectorAll(".nav a[href]").forEach(function (a) {
-      var target = a.getAttribute("href").split("#")[0].split("/").pop();
-      if (target === file) a.setAttribute("aria-current", "page");
+      if (a.origin === location.origin && pagePath(a.pathname) === here) {
+        a.setAttribute("aria-current", "page");
+      }
     });
   }
 

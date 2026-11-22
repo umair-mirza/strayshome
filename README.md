@@ -17,6 +17,7 @@ designed to be hosted for free on **GitHub Pages** at `https://strayshome.com`.
 | `adopt.html` | Adoption process, adopter criteria, enquiry form, FAQ |
 | `get-involved.html` | Volunteer roles, fostering, sponsorship, corporate partnerships, sign-up form |
 | `gallery.html` | Full-page auto-scrolling photo wall with lightbox |
+| `stories/` | Blog index and individual rescue stories |
 | `contact.html` | Emergency numbers, contact grid, message form, opening hours, scam warning |
 | `terms.html` | Terms & Conditions |
 | `privacy.html` | Privacy Policy |
