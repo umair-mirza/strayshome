@@ -41,7 +41,7 @@
     function pagePath(path) { return path.replace(/\/(?:index\.html)?$/, "/"); }
 
     var here = pagePath(location.pathname);
-    document.querySelectorAll(".nav a[href]").forEach(function (a) {
+    document.querySelectorAll(".nav a[href], .header-blog").forEach(function (a) {
       if (a.origin === location.origin && pagePath(a.pathname) === here) {
         a.setAttribute("aria-current", "page");
       }
